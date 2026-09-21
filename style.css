@@ -226,7 +226,7 @@ body {
     background-color: white;
     width: 90%;
     max-width: 800px;
-    max-height: 80vh; /* Limits the modal height to 80% of the screen viewport */
+    max-height: 80vh;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
@@ -244,7 +244,7 @@ body {
 .modal-card img {
     width: 40%;
     object-fit: cover;
-    flex-shrink: 0; /* Prevents the image from shrinking */
+    flex-shrink: 0;
 }
 
 .modal-text-content {
@@ -253,7 +253,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    overflow-y: auto; /* Adds a scrollbar only to the text area when content is long */
+    overflow-y: auto;
     max-height: 100%;
 }
 
