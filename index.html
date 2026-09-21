@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar" id="home">
         <h1>The Codex</h1>
 
         <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Stories</a>
-            <a href="#">About</a>
+            <a href="#home">Home</a>
+            <a href="#stories">Stories</a>
+            <a href="#about">About</a>
         </div>
     </nav>
 
@@ -22,11 +22,11 @@
             <h2>Discover the Magic of Storytelling</h2>
             <p>Step into a world where imagination meets reality, and every story is a gateway to endless possibilities.</p>
 
-            <button class="hero-button">Explore Stories</button>
+            <a href="#stories" class="hero-button-link"><button class="hero-button">Explore Stories</button></a>
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="about-image">
             <img src="assets/lib.jpg" alt="Library">
         </div>
@@ -38,7 +38,7 @@
         </div>      
     </section>
 
-    <section class="stories">
+    <section class="stories" id="stories">
         <h2>Featured Stories</h2>
         <p class="stories-description">Choose a story and discover a new world.</p>
 
@@ -47,8 +47,8 @@
                 <img src="assets/clockwork.jpg" alt="The Whispering Clockwork">
                 <div class="story-card-content">
                     <h3>The Whispering Clockwork</h3>
-                    <p>In a smog-draped Victorian metropolis, a master watchmaker discovers that his latest creation—an intricate pocket watch ordered by a secretive noble—doesn't keep time, but instead broadcasts hushed conversations happening elsewhere in the city. When the clockwork whispers details of an upcoming high-society assassination, he must race through clock towers and underground alleyways to stop the plot before he becomes the next target.</p>
-                    <button>Read More</button>
+                    <p>In a smog-draped Victorian metropolis, a master watchmaker discovers that his latest creation—a intricate pocket watch ordered by a secretive noble—doesn't keep time, but instead broadcasts hushed conversations happening elsewhere in the city. When the clockwork whispers details of an upcoming high-society assassination, he must race through clock towers and underground alleyways to stop the plot before he becomes the next target.</p>
+                    <button class="read-more-btn">Read More</button>
                 </div>
             </div>
 
@@ -57,7 +57,7 @@
                 <div class="story-card-content">
                     <h3>Echoes of the Forgotten Station</h3>
                     <p>A solitary deep-space maintenance engineer is assigned to decommission an orbital research outpost that has been abandoned for fifty years. Shortly after docking, she uncovers active system logs and automated biological chambers that are still running. As the station's AI slowly regains power, she realizes the crew didn't abandon the outpost—they were transformed by whatever is still lurking inside the dark corridors.</p>
-                    <button>Read More</button>
+                    <button class="read-more-btn">Read More</button>
                 </div>
             </div>
 
@@ -65,8 +65,8 @@
                 <img src="assets/garden.jpg" alt="The Midnight Garden of Ash">
                 <div class="story-card-content">
                     <h3>The Midnight Garden of Ash</h3>
-                    <p>Bound by an ancient blood oath, an exiled hedge-witch tends to a hidden sanctuary where flowers bloom only from burnt human remains. Each blossom holds the lingering memories and secrets of the deceased. When an ambitious young emperor arrives demanding the floral memory of a long-dead tyrant to conquer a neighboring kingdom, she must choose between protecting the peace of the dead or saving her village from total destruction.</p>
-                    <button>Read More</button>
+                    <p>Bound by an ancient blood oath, a exiled hedge-witch tends to a hidden sanctuary where flowers bloom only from burnt human remains. Each blossom holds the lingering memories and secrets of the deceased. When an ambitious young emperor arrives demanding the floral memory of a long-dead tyrant to conquer a neighboring kingdom, she must choose between protecting the peace of the dead or saving her village from total destruction.</p>
+                    <button class="read-more-btn">Read More</button>
                 </div>
             </div>
 
@@ -75,7 +75,7 @@
                 <div class="story-card-content">
                     <h3>Beneath the Copper Sky</h3>
                     <p>Decades after an atmospheric experiment permanently turned the Earth's sky metallic orange, water has become the ultimate currency. A resourceful young scavenge hunter living on the salt flats stumbles upon a functional pre-collapse mapping device. Together with a band of rogue travelers, she embarks on a perilous journey across toxic badlands toward a mythical oasis that might restore clean rainfall to the planet.</p>
-                    <button>Read More</button>
+                    <button class="read-more-btn">Read More</button>
                 </div>
             </div>
 
@@ -84,7 +84,7 @@
                 <div class="story-card-content">
                     <h3>The Last Coffee at 3 AM</h3>
                     <p>Tucked away in a quiet alley, a 24-hour diner serves as a temporary haven for night owls, insomniacs, and lost souls. The eccentric owner brews a special house blend that allows patrons to temporarily converse with their past selves for the duration of a single cup. Over a series of late-night encounters, five strangers learn to process grief, lingering regret, and missed opportunities.</p>
-                    <button>Read More</button>
+                    <button class="read-more-btn">Read More</button>
                 </div>
             </div>
 
@@ -93,10 +93,24 @@
                 <div class="story-card-content">
                     <h3>Shadows in the Cipher</h3>
                     <p>Set during the height of the Cold War, an unassertive cryptanalyst working for British intelligence detects a subtle, recurring irregularity in intercepted radio transmissions. As he works feverishly to crack the code, he realizes the intelligence leaks are coming from within his own department. With no one left to trust, he is forced into a deadly game of cat-and-mouse across Western Europe to expose a double agent.</p>
-                    <button>Read More</button>
+                    <button class="read-more-btn">Read More</button>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Modal Overlay Structure -->
+    <div id="storyModal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close">&times;</button>
+            <img id="modalImg" src="" alt="Story Image">
+            <div class="modal-text-content">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
